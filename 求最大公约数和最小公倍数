@@ -1,0 +1,50 @@
+//求最大公约数和最小公倍数 
+
+#include<stdio.h>
+void f1(int a,int b)
+{
+	int m=a,n=b;
+	int t;
+	while(b!=0)
+	{
+		t=a%b;
+		a=b;
+		b=t;
+	}
+	printf("method of successive division\n");
+	printf("The largest common divisor:%d\n",a);
+	printf("The least common multiple:%d\n",m*n/a);
+ } 
+void f2(int a,int b)
+{
+	int m=a,n=b;
+	while(a!=b)
+		if(a>b)	a=a-b;
+		else	b=b-a;
+	printf("subtraction method\n");
+	printf("The largest common divisor:%d\n",a);
+	printf("The least common multiple:%d\n",m*n/a);
+}
+void f3(int a,int b)
+{
+	int m=a,n=b;
+	int i,t;
+	for(i=1;i<=a;i++)
+		if(a%i == 0 && b%i == 0)	t=i;
+	printf("method of exhaustion\n");
+	printf("The largest common divisor:%d\n",t);
+	printf("The least common multiple:%d\n",m*n/t);
+}
+int main()
+{
+	int a,b;
+	printf("Please input number a and b\n");
+	printf("a:");
+	scanf("%d",&a);
+	printf("b:");
+	scanf("%d",&b); 
+	f1(a,b);			//辗转相除法 
+	f2(a,b);			// 相减法 
+	f3(a,b);			//穷举法 
+	return 0;
+}
