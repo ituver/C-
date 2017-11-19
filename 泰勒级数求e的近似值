@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int i=1;
+	float e=1.0,t=1,p=1;
+	while(p>1.0e-8)
+	{
+		t=t*i;
+		p=1.0/t;
+		e=e+p;
+		i=i+1;
+	}
+	printf("The e is %.8f\n",e);
+	return 0;
+}
