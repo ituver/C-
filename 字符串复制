@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+void str1(char s2[])	//不使用函数 
+{
+	int i;
+	char s1[80];
+	for(i=0;s2[i] != 0;i++)
+		s1[i] = s2[i];
+	s1[i] = '\0';
+	printf("字符串s1:%s\n",s1); 
+}
+void str2(char s2[])	//使用strcpy函数 
+{
+	char s1[80];
+	strcpy(s1,s2);
+	printf("字符串s1:"); 
+	puts(s1);
+}
+int main()
+{
+	char s2[80];
+	printf("请输入字符串:\n");
+	gets(s2);printf("字符串s2:%s\n",s2);
+	
+	str1(s2);
+	str2(s2);
+	return 0;
+}
