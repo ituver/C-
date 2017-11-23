@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int m,a,b,c,d;
+	for(m=1000;m<10000;m++)
+	{
+		a=m/1000;
+		b=m/100%10;
+		c=m/10%10;
+		d=m%10; 
+		if(a==d&&b==c)
+			printf("%d\n",m);
+	}
+	return 0;
+} 
