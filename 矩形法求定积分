@@ -1,0 +1,22 @@
+/*矩形法求定积分*/
+ 
+#include<stdio.h>
+int main()
+{
+	int i,n;
+	float a,b;
+	double h,f,x,s=0;
+	printf("请输入积分区间a,b及划分积分区间间隔的份数（用空格分开）:");
+	scanf("%f%f%d",&a,&b,&n);
+	h=(b-a)/n;					/* 矩形高=积分区间/h */
+	x=a;						/*积分起点*/
+	f=x;						/*函数y=f(x)=x*/
+	for(i=1;i<n;i++)			/*n-1个矩形*/
+	{
+		s+=f*h;					/*小矩形面积累加*/ 
+		x+=h;					/*自变量x递增*/ 
+		f=x;					/*y=f(x)=矩形边长*/ 
+	}
+	printf("积分区间的面积=%f\n",s);
+	return 0;
+}
