@@ -1,0 +1,20 @@
+/* 用梯形法求定积分 */
+#include<stdio.h>
+int main()
+{
+	int i,n;
+	float a,b,x;
+	double f1,f2,h,s=0;
+	printf("请输入积分区间a,b及积分区间分成多少份（用空格分开）:");
+	scanf("%f%f%d",&a,&b,&n);
+	f1=x;
+	h=(b-a)/n;
+	for(i=1;i<=n;i++)
+	{
+		f2=a+i*h;
+		s+=(f1+f2)*h/2;
+		f1=f2;
+	}
+	printf("积分区间的面积=%f\n",s);
+	return 0;
+}
