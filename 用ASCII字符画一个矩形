@@ -1,0 +1,26 @@
+/*用ASCII字符画一个矩形*/
+
+#include<stdio.h>
+int main()
+{	
+	unsigned int i,j;
+	printf("\n");
+	printf("%c",218);
+	for(i=0;i<70;i++)
+		printf("%c",196);
+	printf("%c\n",191);
+	
+	for(j=0;j<20;j++)
+	{
+		printf("%c",179);
+		for(i=0;i<70;i++)
+		printf("%c",32);
+		printf("%c\n",179);
+	 } 
+	 
+	 printf("%c",192);
+	 for(i=0;i<70;i++)
+	 printf("%c",196);
+	 printf("%c\n",217);
+	return 0;
+}
