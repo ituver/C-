@@ -5,22 +5,22 @@ int main()
 {	
 	unsigned int i,j;
 	printf("\n");
-	printf("%c",218);
+	printf("%c",218);		/* 左上角*/
 	for(i=0;i<70;i++)
-		printf("%c",196);
-	printf("%c\n",191);
+		printf("%c",196);	/*横线*/
+	printf("%c\n",191);		/*右上角*/
 	
 	for(j=0;j<20;j++)
 	{
-		printf("%c",179);
+		printf("%c",179);	/* | */
 		for(i=0;i<70;i++)
-		printf("%c",32);
-		printf("%c\n",179);
+		printf("%c",32);	/*空格*/
+		printf("%c\n",179);	/* | */
 	 } 
 	 
-	 printf("%c",192);
+	 printf("%c",192);		/* 左下角*/
 	 for(i=0;i<70;i++)
-	 printf("%c",196);
-	 printf("%c\n",217);
+	 printf("%c",196);		/* 横线 */
+	 printf("%c\n",217);		/*右下角*/
 	return 0;
 }
