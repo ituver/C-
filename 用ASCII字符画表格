@@ -1,0 +1,36 @@
+/*用ASCII字符画表格*/
+
+#include<stdio.h>
+int main()
+{
+	unsigned int i,j;
+	printf("\n");
+	/*以下画表头线*/
+	printf("%c",218);				/*左上角*/ 
+	for(i=0;i<70;i++)
+		printf("%c",196);			/*横线*/
+		printf("%c\n",191);			/*右上角*/
+		/*以下画表中横线和空行*/
+		for(j=0;j<20;j++)			/*表格行数*/	
+		{
+			printf("%c",179);		/* | */ 
+			for(i=0;i<70;i++)		/*横线*/
+				printf("%c",32);	/*空格*/ 
+			printf("%c\n",179);		/* | */ 
+			printf("%c",195);		/* | */ 
+			for(i=0;i<70;i++)
+				printf("%c",196);	/*横线*/ 
+			printf("%c\n",180);		/* - | */ 
+		}
+		printf("%c",179);
+		/*以下画表底线*/ 
+		for(i=0;i<70;i++)
+			printf("%c",32);		/*空格*/ 
+		printf("%c\n",179);			/* | */ 
+		printf("%c",192);			/*左下角*/ 
+		for(i=0;i<70;i++)
+			printf("%c",196);		/*横线*/ 
+		printf("%c\n",217);			/*右下角*/ 
+	return 0;
+	
+}
