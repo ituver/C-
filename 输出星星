@@ -1,0 +1,25 @@
+/*输入样式1       输入样式2
+3                6
+*                *
+**               **
+                 ***
+*/
+
+#include<stdio.h>
+int main()
+{
+	int i,t=0,k=0,n;
+	scanf("%d",&n);         /*输入个数*/
+	 for(i=0;i<2*n-i;i++)   /*输出*个数*/
+	 {
+	 	printf("*");
+	 	if(++k > t)           /*控制每行个数*/
+	 	{
+	 		t++;
+	 		printf("\n");
+	 		k=0;
+	 		continue;
+		 }
+	 }
+	return 0;
+}
