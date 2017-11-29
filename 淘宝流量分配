@@ -1,0 +1,31 @@
+#include<stdio.h>
+#define N 10000
+int main()
+{
+	int i,n,a[N];
+	int sum=0;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+		scanf("%d",&a[i]);
+	if(n%2 == 1)
+	{
+		for(i=0;i<n;i+=2)
+			sum+=a[i];
+	}
+	else
+	{
+		if(a[n-1]>a[n-2])
+		{
+			for(i=0;i<n-2;i+=2)
+				sum+=a[i];
+			sum+=a[n-1];
+		}
+		else
+		{
+			for(i=0;i<n;i+=2)
+				sum+=a[i];
+		}
+	}
+	printf("%d\n",sum);
+	return 0;
+}
