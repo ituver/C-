@@ -1,0 +1,18 @@
+#include<stdio.h>
+#define N 200
+int main()
+{
+	int a[N],b[N];
+	int count,i,n;
+	scanf("%d",&n);
+	count=n;
+	for(i=0;i<n;i++)
+		scanf("%d",&a[i]);
+	for(i=1;i<n-1;i++)
+	{
+		if(a[i-1]==a[i] && a[i] == a[i+1] )
+		count--;
+	}
+	printf("%d\n",count);
+	return 0;
+}
